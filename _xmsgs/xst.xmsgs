@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd</arg>&quot; line <arg fmt="%d" index="2">114</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">icon</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd</arg>&quot; line <arg fmt="%d" index="2">118</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">ila</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd</arg>&quot; line <arg fmt="%d" index="2">396</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">ila_data&lt;35:28&gt;</arg>&gt; has a width of <arg fmt="%d" index="4">8</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd</arg>&quot; line <arg fmt="%d" index="2">397</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">ila_data&lt;43:36&gt;</arg>&gt; has a width of <arg fmt="%d" index="4">8</arg> bits but assigned expression is <arg fmt="%d" index="5">10</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">trig0</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">ila_data&lt;127:44&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">000000000000000000000000000000000000000000000000000000000000000000000000000000000000</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">R_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;R_1&gt; &lt;R_2&gt; &lt;R_3&gt; &lt;R_4&gt; &lt;R_5&gt; &lt;R_6&gt; &lt;R_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">B_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;B_1&gt; &lt;B_2&gt; &lt;B_3&gt; &lt;B_4&gt; &lt;B_5&gt; &lt;B_6&gt; &lt;B_7&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">counter_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">G_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;G_1&gt; &lt;G_2&gt; &lt;G_3&gt; &lt;G_4&gt; &lt;G_5&gt; &lt;G_6&gt; &lt;G_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ball_y_direction_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">30 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ball_y_direction_2&gt; &lt;ball_y_direction_3&gt; &lt;ball_y_direction_4&gt; &lt;ball_y_direction_5&gt; &lt;ball_y_direction_6&gt; &lt;ball_y_direction_7&gt; &lt;ball_y_direction_8&gt; &lt;ball_y_direction_9&gt; &lt;ball_y_direction_10&gt; &lt;ball_y_direction_11&gt; &lt;ball_y_direction_12&gt; &lt;ball_y_direction_13&gt; &lt;ball_y_direction_14&gt; &lt;ball_y_direction_15&gt; &lt;ball_y_direction_16&gt; &lt;ball_y_direction_17&gt; &lt;ball_y_direction_18&gt; &lt;ball_y_direction_19&gt; &lt;ball_y_direction_20&gt; &lt;ball_y_direction_21&gt; &lt;ball_y_direction_22&gt; &lt;ball_y_direction_23&gt; &lt;ball_y_direction_24&gt; &lt;ball_y_direction_25&gt; &lt;ball_y_direction_26&gt; &lt;ball_y_direction_27&gt; &lt;ball_y_direction_28&gt; &lt;ball_y_direction_29&gt; &lt;ball_y_direction_30&gt; &lt;ball_y_direction_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">ball_x_direction_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">GAMEofPINGPONG</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">30 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ball_x_direction_2&gt; &lt;ball_x_direction_3&gt; &lt;ball_x_direction_4&gt; &lt;ball_x_direction_5&gt; &lt;ball_x_direction_6&gt; &lt;ball_x_direction_7&gt; &lt;ball_x_direction_8&gt; &lt;ball_x_direction_9&gt; &lt;ball_x_direction_10&gt; &lt;ball_x_direction_11&gt; &lt;ball_x_direction_12&gt; &lt;ball_x_direction_13&gt; &lt;ball_x_direction_14&gt; &lt;ball_x_direction_15&gt; &lt;ball_x_direction_16&gt; &lt;ball_x_direction_17&gt; &lt;ball_x_direction_18&gt; &lt;ball_x_direction_19&gt; &lt;ball_x_direction_20&gt; &lt;ball_x_direction_21&gt; &lt;ball_x_direction_22&gt; &lt;ball_x_direction_23&gt; &lt;ball_x_direction_24&gt; &lt;ball_x_direction_25&gt; &lt;ball_x_direction_26&gt; &lt;ball_x_direction_27&gt; &lt;ball_x_direction_28&gt; &lt;ball_x_direction_29&gt; &lt;ball_x_direction_30&gt; &lt;ball_x_direction_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+<msg type="warning" file="Xst" num="1415" delta="new" >No path found for this constraint.
+</msg>
+
+<msg type="warning" file="Xst" num="1415" delta="new" >No path found for this constraint.
+</msg>
+
+<msg type="warning" file="Xst" num="1415" delta="new" >No path found for this constraint.
+</msg>
+
+</messages>
+

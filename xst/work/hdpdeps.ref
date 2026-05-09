@@ -1,0 +1,22 @@
+V3 12
+FL "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" 2025/11/16.13:23:49 O.87xd
+EN work/GAMEofPINGPONG 1763317435 \
+      FL "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" \
+      PB ieee/std_logic_1164 1325952872 PB ieee/NUMERIC_STD 1325952877
+AR work/GAMEofPINGPONG/Behavioral 1763317436 \
+      FL "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" \
+      EN work/GAMEofPINGPONG 1763317435 CP icon CP ila
+FL "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/icon.vhd" 2025/11/16.13:14:41 O.87xd
+EN work/icon 1763317431 \
+      FL "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/icon.vhd" \
+      PB ieee/std_logic_1164 1325952872
+AR work/icon/icon_a 1763317432 \
+      FL "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/icon.vhd" \
+      EN work/icon 1763317431
+FL "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/ila.vhd" 2025/11/16.13:18:18 O.87xd
+EN work/ila 1763317433 \
+      FL "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/ila.vhd" \
+      PB ieee/std_logic_1164 1325952872
+AR work/ila/ila_a 1763317434 \
+      FL "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/ila.vhd" \
+      EN work/ila 1763317433

@@ -1,0 +1,749 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: GAMEofPINGPONG.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "GAMEofPINGPONG.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "GAMEofPINGPONG"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : GAMEofPINGPONG
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/icon.vhd" in Library work.
+Architecture icon_a of Entity icon is up to date.
+Compiling vhdl file "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/ila.vhd" in Library work.
+Architecture ila_a of Entity ila is up to date.
+Compiling vhdl file "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" in Library work.
+Entity <gameofpingpong> compiled.
+Entity <GAMEofPINGPONG> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <GAMEofPINGPONG> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <GAMEofPINGPONG> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:2211 - "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" line 114: Instantiating black box module <icon>.
+WARNING:Xst:2211 - "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" line 118: Instantiating black box module <ila>.
+WARNING:Xst:1610 - "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" line 396: Width mismatch. <ila_data<35:28>> has a width of 8 bits but assigned expression is 10-bit wide.
+WARNING:Xst:1610 - "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" line 397: Width mismatch. <ila_data<43:36>> has a width of 8 bits but assigned expression is 10-bit wide.
+Entity <GAMEofPINGPONG> analyzed. Unit <GAMEofPINGPONG> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <GAMEofPINGPONG>.
+    Related source file is "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd".
+WARNING:Xst:653 - Signal <trig0> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:653 - Signal <ila_data<127:44>> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000000000000000000000000000000000000000000000000000000000000000000000000000.
+    Found 8-bit register for signal <B>.
+    Found 32-bit adder for signal <B$add0000> created at line 208.
+    Found 32-bit adder for signal <B$add0001> created at line 208.
+    Found 32-bit adder for signal <B$add0002> created at line 227.
+    Found 32-bit adder for signal <B$add0003> created at line 234.
+    Found 32-bit comparator greater for signal <B$cmp_gt0000> created at line 195.
+    Found 32-bit comparator greater for signal <B$cmp_gt0001> created at line 198.
+    Found 32-bit comparator greater for signal <B$cmp_gt0002> created at line 198.
+    Found 32-bit comparator greater for signal <B$cmp_gt0003> created at line 198.
+    Found 32-bit comparator greater for signal <B$cmp_gt0004> created at line 198.
+    Found 32-bit comparator greater for signal <B$cmp_gt0005> created at line 198.
+    Found 32-bit comparator greater for signal <B$cmp_gt0006> created at line 198.
+    Found 32-bit comparator greater for signal <B$cmp_gt0007> created at line 208.
+    Found 32-bit comparator greater for signal <B$cmp_gt0008> created at line 208.
+    Found 32-bit comparator greater for signal <B$cmp_gt0009> created at line 219.
+    Found 32-bit comparator greater for signal <B$cmp_gt0010> created at line 227.
+    Found 32-bit comparator greater for signal <B$cmp_gt0011> created at line 227.
+    Found 32-bit comparator greater for signal <B$cmp_gt0012> created at line 234.
+    Found 32-bit comparator greater for signal <B$cmp_gt0013> created at line 234.
+    Found 32-bit comparator less for signal <B$cmp_lt0000> created at line 195.
+    Found 32-bit comparator less for signal <B$cmp_lt0001> created at line 198.
+    Found 32-bit comparator less for signal <B$cmp_lt0002> created at line 198.
+    Found 32-bit comparator less for signal <B$cmp_lt0003> created at line 198.
+    Found 32-bit comparator less for signal <B$cmp_lt0004> created at line 198.
+    Found 32-bit comparator less for signal <B$cmp_lt0005> created at line 198.
+    Found 32-bit comparator less for signal <B$cmp_lt0006> created at line 208.
+    Found 32-bit comparator less for signal <B$cmp_lt0007> created at line 208.
+    Found 32-bit comparator less for signal <B$cmp_lt0008> created at line 219.
+    Found 32-bit comparator less for signal <B$cmp_lt0009> created at line 219.
+    Found 32-bit comparator less for signal <B$cmp_lt0010> created at line 227.
+    Found 32-bit comparator less for signal <B$cmp_lt0011> created at line 227.
+    Found 32-bit comparator less for signal <B$cmp_lt0012> created at line 234.
+    Found 32-bit comparator less for signal <B$cmp_lt0013> created at line 234.
+    Found 32-bit subtractor for signal <B$sub0000> created at line 208.
+    Found 32-bit subtractor for signal <B$sub0001> created at line 208.
+    Found 32-bit subtractor for signal <B$sub0002> created at line 227.
+    Found 32-bit subtractor for signal <B$sub0003> created at line 234.
+    Found 32-bit up counter for signal <ball_delay_counter>.
+    Found 32-bit comparator greater for signal <ball_delay_counter$cmp_gt0000> created at line 264.
+    Found 32-bit register for signal <ball_x>.
+    Found 32-bit adder for signal <ball_x$add0001> created at line 267.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_x$mux0001> created at line 271.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_x$mux0004>.
+    Found 32-bit register for signal <ball_x_direction>.
+    Found 32-bit adder for signal <ball_x_direction$add0000> created at line 319.
+    Found 32-bit comparator greatequal for signal <ball_x_direction$cmp_ge0000> created at line 310.
+    Found 32-bit comparator greatequal for signal <ball_x_direction$cmp_ge0001> created at line 320.
+    Found 32-bit comparator greatequal for signal <ball_x_direction$cmp_ge0002> created at line 318.
+    Found 32-bit comparator greatequal for signal <ball_x_direction$cmp_ge0003> created at line 271.
+    Found 32-bit comparator greatequal for signal <ball_x_direction$cmp_ge0004> created at line 271.
+    Found 32-bit comparator greatequal for signal <ball_x_direction$cmp_ge0005> created at line 311.
+    Found 32-bit comparator greatequal for signal <ball_x_direction$cmp_ge0006> created at line 305.
+    Found 32-bit comparator greatequal for signal <ball_x_direction$cmp_ge0007> created at line 305.
+    Found 32-bit comparator greatequal for signal <ball_x_direction$cmp_ge0008> created at line 288.
+    Found 32-bit comparator greater for signal <ball_x_direction$cmp_gt0000> created at line 305.
+    Found 32-bit comparator greater for signal <ball_x_direction$cmp_gt0001> created at line 305.
+    Found 32-bit comparator greater for signal <ball_x_direction$cmp_gt0002> created at line 311.
+    Found 32-bit comparator greater for signal <ball_x_direction$cmp_gt0003> created at line 310.
+    Found 32-bit comparator greater for signal <ball_x_direction$cmp_gt0004> created at line 318.
+    Found 32-bit comparator greater for signal <ball_x_direction$cmp_gt0005> created at line 319.
+    Found 32-bit comparator greater for signal <ball_x_direction$cmp_gt0006> created at line 288.
+    Found 32-bit comparator lessequal for signal <ball_x_direction$cmp_le0000> created at line 310.
+    Found 32-bit comparator lessequal for signal <ball_x_direction$cmp_le0001> created at line 319.
+    Found 32-bit comparator lessequal for signal <ball_x_direction$cmp_le0002> created at line 318.
+    Found 32-bit comparator lessequal for signal <ball_x_direction$cmp_le0003> created at line 271.
+    Found 32-bit comparator lessequal for signal <ball_x_direction$cmp_le0004> created at line 264.
+    Found 32-bit comparator lessequal for signal <ball_x_direction$cmp_le0005> created at line 311.
+    Found 32-bit comparator lessequal for signal <ball_x_direction$cmp_le0006> created at line 305.
+    Found 32-bit comparator lessequal for signal <ball_x_direction$cmp_le0007> created at line 305.
+    Found 32-bit comparator less for signal <ball_x_direction$cmp_lt0000> created at line 305.
+    Found 32-bit comparator less for signal <ball_x_direction$cmp_lt0001> created at line 305.
+    Found 32-bit comparator less for signal <ball_x_direction$cmp_lt0002> created at line 311.
+    Found 32-bit comparator less for signal <ball_x_direction$cmp_lt0003> created at line 310.
+    Found 32-bit comparator less for signal <ball_x_direction$cmp_lt0004> created at line 288.
+    Found 32-bit comparator less for signal <ball_x_direction$cmp_lt0005> created at line 318.
+    Found 32-bit comparator less for signal <ball_x_direction$cmp_lt0006> created at line 320.
+    Found 32-bit comparator less for signal <ball_x_direction$cmp_lt0007> created at line 288.
+    Found 32-bit register for signal <ball_y>.
+    Found 32-bit adder for signal <ball_y$add0000> created at line 271.
+    Found 32-bit adder for signal <ball_y$add0001> created at line 268.
+    Found 32-bit adder for signal <ball_y$addsub0000> created at line 288.
+    Found 32-bit comparator greatequal for signal <ball_y$cmp_ge0000> created at line 288.
+    Found 32-bit comparator less for signal <ball_y$cmp_lt0000> created at line 271.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_y$mux0001> created at line 271.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_y$mux0004>.
+    Found 32-bit subtractor for signal <ball_y$sub0000> created at line 271.
+    Found 32-bit subtractor for signal <ball_y$sub0001> created at line 271.
+    Found 32-bit register for signal <ball_y_direction>.
+    Found 32-bit comparator greatequal for signal <ball_y_direction$cmp_ge0000> created at line 328.
+    Found 32-bit comparator greater for signal <ball_y_direction$cmp_gt0000> created at line 327.
+    Found 32-bit comparator lessequal for signal <ball_y_direction$cmp_le0000> created at line 327.
+    Found 32-bit comparator less for signal <ball_y_direction$cmp_lt0000> created at line 328.
+    Found 32-bit 4-to-1 multiplexer for signal <ball_y_direction$mux0000>.
+    Found 1-bit register for signal <Clk25MHz>.
+    Found 32-bit up counter for signal <counter>.
+    Found 8-bit register for signal <G>.
+    Found 32-bit comparator greater for signal <G$cmp_gt0000> created at line 212.
+    Found 32-bit up counter for signal <horizontalPositionCounter>.
+    Found 32-bit up counter for signal <input_delay_counter>.
+    Found 32-bit comparator greater for signal <input_delay_counter$cmp_gt0000> created at line 341.
+    Found 1-bit register for signal <ourHsync>.
+    Found 32-bit comparator greater for signal <ourHsync$cmp_gt0000> created at line 158.
+    Found 32-bit comparator less for signal <ourHsync$cmp_lt0000> created at line 158.
+    Found 1-bit register for signal <ourVsync>.
+    Found 32-bit comparator greater for signal <ourVsync$cmp_gt0000> created at line 170.
+    Found 32-bit comparator less for signal <ourVsync$cmp_lt0000> created at line 170.
+    Found 32-bit register for signal <pause_counter>.
+    Found 32-bit adder for signal <pause_counter$addsub0000> created at line 274.
+    Found 32-bit register for signal <player1_y>.
+    Found 32-bit addsub for signal <player1_y$addsub0000>.
+    Found 32-bit comparator greatequal for signal <player1_y$cmp_ge0000> created at line 364.
+    Found 32-bit comparator greater for signal <player1_y$cmp_gt0000> created at line 363.
+    Found 32-bit comparator lessequal for signal <player1_y$cmp_le0000> created at line 363.
+    Found 32-bit comparator lessequal for signal <player1_y$cmp_le0001> created at line 341.
+    Found 32-bit comparator less for signal <player1_y$cmp_lt0000> created at line 364.
+    Found 32-bit 4-to-1 multiplexer for signal <player1_y$mux0001>.
+    Found 32-bit register for signal <player2_y>.
+    Found 32-bit addsub for signal <player2_y$addsub0000>.
+    Found 32-bit comparator greatequal for signal <player2_y$cmp_ge0000> created at line 366.
+    Found 32-bit comparator greater for signal <player2_y$cmp_gt0000> created at line 365.
+    Found 32-bit comparator lessequal for signal <player2_y$cmp_le0000> created at line 365.
+    Found 32-bit comparator less for signal <player2_y$cmp_lt0000> created at line 366.
+    Found 32-bit 4-to-1 multiplexer for signal <player2_y$mux0001>.
+    Found 8-bit register for signal <R>.
+    Found 32-bit up counter for signal <verticalPositionCounter>.
+    Found 32-bit comparator less for signal <verticalPositionCounter$cmp_lt0000> created at line 145.
+    Found 32-bit comparator less for signal <verticalPositionCounter$cmp_lt0001> created at line 141.
+    Found 1-bit register for signal <videoOn>.
+    Found 32-bit comparator less for signal <videoOn$cmp_lt0000> created at line 182.
+    Found 32-bit comparator less for signal <videoOn$cmp_lt0001> created at line 182.
+    Summary:
+	inferred   5 Counter(s).
+	inferred 252 D-type flip-flop(s).
+	inferred  18 Adder/Subtractor(s).
+	inferred  86 Comparator(s).
+	inferred 224 Multiplexer(s).
+Unit <GAMEofPINGPONG> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 18
+ 32-bit adder                                          : 10
+ 32-bit addsub                                         : 2
+ 32-bit subtractor                                     : 6
+# Counters                                             : 5
+ 32-bit up counter                                     : 5
+# Registers                                            : 14
+ 1-bit register                                        : 4
+ 32-bit register                                       : 7
+ 8-bit register                                        : 3
+# Comparators                                          : 86
+ 32-bit comparator greatequal                          : 13
+ 32-bit comparator greater                             : 29
+ 32-bit comparator less                                : 32
+ 32-bit comparator lessequal                           : 12
+# Multiplexers                                         : 7
+ 32-bit 4-to-1 multiplexer                             : 7
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/icon.ngc>.
+Reading core <ipcore_dir/ila.ngc>.
+Loading core <icon> for timing and area information for instance <system_icon>.
+Loading core <ila> for timing and area information for instance <system_ila>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 18
+ 32-bit adder                                          : 10
+ 32-bit addsub                                         : 2
+ 32-bit subtractor                                     : 6
+# Counters                                             : 5
+ 32-bit up counter                                     : 5
+# Registers                                            : 252
+ Flip-Flops                                            : 252
+# Comparators                                          : 86
+ 32-bit comparator greatequal                          : 13
+ 32-bit comparator greater                             : 29
+ 32-bit comparator less                                : 32
+ 32-bit comparator lessequal                           : 12
+# Multiplexers                                         : 7
+ 32-bit 4-to-1 multiplexer                             : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <R_0> in Unit <GAMEofPINGPONG> is equivalent to the following 7 FFs/Latches, which will be removed : <R_1> <R_2> <R_3> <R_4> <R_5> <R_6> <R_7> 
+INFO:Xst:2261 - The FF/Latch <B_0> in Unit <GAMEofPINGPONG> is equivalent to the following 7 FFs/Latches, which will be removed : <B_1> <B_2> <B_3> <B_4> <B_5> <B_6> <B_7> 
+WARNING:Xst:2677 - Node <counter_1> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_2> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_3> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_4> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_5> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_6> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_7> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_8> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_9> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_10> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_11> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_12> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_13> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_14> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_15> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_16> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_17> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_18> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_19> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_20> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_21> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_22> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_23> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_24> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_25> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_26> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_27> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_28> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_29> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_30> of sequential type is unconnected in block <GAMEofPINGPONG>.
+WARNING:Xst:2677 - Node <counter_31> of sequential type is unconnected in block <GAMEofPINGPONG>.
+INFO:Xst:2261 - The FF/Latch <G_0> in Unit <GAMEofPINGPONG> is equivalent to the following 7 FFs/Latches, which will be removed : <G_1> <G_2> <G_3> <G_4> <G_5> <G_6> <G_7> 
+INFO:Xst:2261 - The FF/Latch <ball_y_direction_1> in Unit <GAMEofPINGPONG> is equivalent to the following 30 FFs/Latches, which will be removed : <ball_y_direction_2> <ball_y_direction_3> <ball_y_direction_4> <ball_y_direction_5> <ball_y_direction_6> <ball_y_direction_7> <ball_y_direction_8> <ball_y_direction_9> <ball_y_direction_10> <ball_y_direction_11> <ball_y_direction_12> <ball_y_direction_13> <ball_y_direction_14> <ball_y_direction_15> <ball_y_direction_16> <ball_y_direction_17> <ball_y_direction_18> <ball_y_direction_19> <ball_y_direction_20> <ball_y_direction_21> <ball_y_direction_22> <ball_y_direction_23> <ball_y_direction_24> <ball_y_direction_25> <ball_y_direction_26> <ball_y_direction_27> <ball_y_direction_28> <ball_y_direction_29> <ball_y_direction_30> <ball_y_direction_31> 
+INFO:Xst:2261 - The FF/Latch <ball_x_direction_1> in Unit <GAMEofPINGPONG> is equivalent to the following 30 FFs/Latches, which will be removed : <ball_x_direction_2> <ball_x_direction_3> <ball_x_direction_4> <ball_x_direction_5> <ball_x_direction_6> <ball_x_direction_7> <ball_x_direction_8> <ball_x_direction_9> <ball_x_direction_10> <ball_x_direction_11> <ball_x_direction_12> <ball_x_direction_13> <ball_x_direction_14> <ball_x_direction_15> <ball_x_direction_16> <ball_x_direction_17> <ball_x_direction_18> <ball_x_direction_19> <ball_x_direction_20> <ball_x_direction_21> <ball_x_direction_22> <ball_x_direction_23> <ball_x_direction_24> <ball_x_direction_25> <ball_x_direction_26> <ball_x_direction_27> <ball_x_direction_28> <ball_x_direction_29> <ball_x_direction_30> <ball_x_direction_31> 
+
+Optimizing unit <GAMEofPINGPONG> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block GAMEofPINGPONG, actual ratio is 29.
+FlipFlop ourVsync has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop Clk25MHz has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop ourHsync has been replicated 1 time(s) to handle iob=true attribute.
+FlipFlop B_0 has been replicated 8 time(s) to handle iob=true attribute.
+FlipFlop G_0 has been replicated 8 time(s) to handle iob=true attribute.
+FlipFlop R_0 has been replicated 8 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 327
+ Flip-Flops                                            : 327
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : GAMEofPINGPONG.ngr
+Top Level Output File Name         : GAMEofPINGPONG
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 32
+
+Cell Usage :
+# BELS                             : 4510
+#      GND                         : 3
+#      INV                         : 305
+#      LUT1                        : 486
+#      LUT2                        : 657
+#      LUT3                        : 134
+#      LUT4                        : 478
+#      LUT4_L                      : 2
+#      MUXCY                       : 1604
+#      MUXCY_L                     : 64
+#      MUXF5                       : 38
+#      MUXF6                       : 11
+#      MUXF7                       : 1
+#      VCC                         : 3
+#      XORCY                       : 724
+# FlipFlops/Latches                : 807
+#      FD                          : 128
+#      FDC                         : 1
+#      FDCE                        : 24
+#      FDE                         : 203
+#      FDP                         : 137
+#      FDPE                        : 18
+#      FDR                         : 148
+#      FDRE                        : 106
+#      FDRS                        : 31
+#      FDS                         : 10
+#      LDC                         : 1
+# RAMS                             : 17
+#      RAMB16_S1_S9                : 17
+# Shift Registers                  : 183
+#      SRL16                       : 128
+#      SRL16E                      : 1
+#      SRLC16E                     : 54
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 31
+#      IBUF                        : 4
+#      OBUF                        : 27
+# Others                           : 4
+#      BSCAN_SPARTAN3              : 1
+#      TIMESPEC                    : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                     1314  out of   4656    28%  
+ Number of Slice Flip Flops:            780  out of   9312     8%  
+ Number of 4 input LUTs:               2245  out of   9312    24%  
+    Number used as logic:              2062
+    Number used as Shift registers:     183
+ Number of IOs:                          32
+ Number of bonded IOBs:                  32  out of    232    13%  
+    IOB Flip Flops:                      27
+ Number of BRAMs:                        17  out of     20    85%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------------------------------------+--------------------------------------------------------+-------+
+Clock Signal                                                                        | Clock buffer(FF name)                                  | Load  |
+------------------------------------------------------------------------------------+--------------------------------------------------------+-------+
+system_icon/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1                                        | BUFG                                                   | 158   |
+system_icon/U0/iUPDATE_OUT                                                          | NONE(system_icon/U0/U_ICON/U_iDATA_CMD)                | 1     |
+Clk                                                                                 | BUFGP                                                  | 540   |
+system_icon/CONTROL0<13>(system_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(system_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
+Clk25MHz1                                                                           | BUFG                                                   | 324   |
+------------------------------------------------------------------------------------+--------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                   | Buffer(FF name)                                                                                                         | Load  |
+-----------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------+
+system_ila/N0(system_ila/XST_GND:G)                                                                              | NONE(system_ila/U0/I_DQ.G_DW[0].U_DQ)                                                                                   | 137   |
+system_icon/CONTROL0<20>(system_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[0].U_HCE:O)                             | NONE(system_ila/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GANDX.U_match/I_SRL16.U_GANDX_SRL16/F_TW[0].U_TREG)| 16    |
+system_icon/U0/U_ICON/U_CMD/iSEL_n(system_icon/U0/U_ICON/U_CMD/U_SEL_n:O)                                        | NONE(system_icon/U0/U_ICON/U_CMD/G_TARGET[10].I_NE0.U_TARGET)                                                           | 10    |
+system_ila/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/iCLR(system_ila/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_CLEAR:O)        | NONE(system_ila/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0)                                                              | 4     |
+system_ila/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/iCLR(system_ila/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_CLEAR:O)      | NONE(system_ila/U0/I_YES_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0)                                                             | 4     |
+system_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/iCLR(system_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_CLEAR:O)              | NONE(system_ila/U0/I_YES_D.U_ILA/U_STAT/U_DSL1/U_DOUT0)                                                                 | 4     |
+system_ila/U0/I_YES_D.U_ILA/iARM(system_ila/U0/I_YES_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD:Q)             | NONE(system_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDCE)                                                                   | 2     |
+system_icon/CONTROL0<13>(system_icon/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)                             | NONE(system_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_FDPE)                                                                   | 1     |
+system_icon/U0/U_ICON/iSEL_n(system_icon/U0/U_ICON/U_iSEL_n:O)                                                   | NONE(system_icon/U0/U_ICON/U_iDATA_CMD)                                                                                 | 1     |
+system_ila/U0/I_YES_D.U_ILA/U_STAT/ACTRESET_pulse(system_ila/U0/I_YES_D.U_ILA/U_STAT/U_RESET_EDGE/I_H2L.U_DOUT:Q)| NONE(system_ila/U0/I_YES_D.U_ILA/U_STAT/U_RISING)                                                                       | 1     |
+system_ila/U0/I_YES_D.U_ILA/iRESET<1>(system_ila/U0/I_YES_D.U_ILA/U_RST/G_RST[1].U_RST:Q)                        | NONE(system_ila/U0/I_YES_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG)                                | 1     |
+-----------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 13.630ns (Maximum Frequency: 73.370MHz)
+   Minimum input arrival time before clock: 6.775ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
+
+=========================================================================
+Timing constraint: TS_J_CLK = PERIOD TIMEGRP "J_CLK" 30 nS HIGH 15 nS
+  Clock period: 8.331ns (frequency: 120.034MHz)
+  Total number of paths / destination ports: 3985 / 529
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Slack:                  21.669ns
+  Source:               system_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s8_if.ram_rt1_s1_s8_i (RAM)
+  Destination:          system_icon/U0/U_ICON/U_TDO_reg (FF)
+  Data Path Delay:      8.331ns (Levels of Logic = 9)
+  Source Clock:         system_icon/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising at 0.000ns
+  Destination Clock:    system_icon/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising at 30.000ns
+
+  Data Path: system_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s8_if.ram_rt1_s1_s8_i (RAM) to system_icon/U0/U_ICON/U_TDO_reg (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S1_S9:CLKA->DOA0    1   2.436   0.426  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s8_if.ram_rt1_s1_s8_i (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<0>)
+     LUT3:I1->O            1   0.612   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_11 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_11)
+     MUXF5:I0->O           1   0.278   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_9_f5 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_9_f5)
+     MUXF6:I0->O           1   0.451   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_7_f6 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_7_f6)
+     MUXF7:I0->O           1   0.451   0.360  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_5_f7 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_5_f7)
+     LUT4:I3->O            1   0.612   0.426  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<4> (U0/I_YES_D.U_ILA/iDATA_DOUT)
+     LUT3:I1->O            1   0.612   0.509  U0/I_YES_D.U_ILA/U_DOUT (CONTROL<3>)
+     end scope: 'system_ila'
+     begin scope: 'system_icon'
+     LUT4:I0->O            1   0.612   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_4 (U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_4)
+     MUXF5:I0->O           1   0.278   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_2_f5 (U0/U_ICON/iTDO_next)
+     FDE:D                     0.268          U0/U_ICON/U_TDO_reg
+    ----------------------------------------
+    Total                      8.331ns (6.610ns logic, 1.721ns route)
+                                       (79.3% logic, 20.7% route)
+
+=========================================================================
+Timing constraint: TS_U_TO_J = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "J_CLK" 15 nS
+  Clock period: 3.016ns (frequency: 331.587MHz)
+  Total number of paths / destination ports: 18 / 18
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Slack:                  11.984ns
+  Source:               system_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          system_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[6].I_EQ0.U_FDR (FF)
+  Data Path Delay:      3.016ns (Levels of Logic = 1)
+  Source Clock:         system_icon/U0/iUPDATE_OUT rising at 0.000ns
+  Destination Clock:    system_icon/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising at 15.000ns
+
+  Data Path: system_icon/U0/U_ICON/U_iDATA_CMD (FF) to system_icon/U0/U_ICON/U_SYNC/G_SYNC_WORD[6].I_EQ0.U_FDR (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.451  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              8   0.612   0.643  U0/U_ICON/U_SYNC/U_iDATA_CMD_n (U0/U_ICON/U_SYNC/iDATA_CMD_n)
+     FDR:R                     0.795          U0/U_ICON/U_SYNC/G_SYNC_WORD[6].I_EQ0.U_FDR
+    ----------------------------------------
+    Total                      3.016ns (1.921ns logic, 1.095ns route)
+                                       (63.7% logic, 36.3% route)
+
+=========================================================================
+Timing constraint: TS_U_TO_U = MAXDELAY FROM TIMEGRP "U_CLK" TO TIMEGRP "U_CLK" 15 nS
+  Clock period: 2.202ns (frequency: 454.060MHz)
+  Total number of paths / destination ports: 1 / 1
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Slack:                  12.798ns
+  Source:               system_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:          system_icon/U0/U_ICON/U_iDATA_CMD (FF)
+  Data Path Delay:      2.202ns (Levels of Logic = 1)
+  Source Clock:         system_icon/U0/iUPDATE_OUT rising at 0.000ns
+  Destination Clock:    system_icon/U0/iUPDATE_OUT rising at 15.000ns
+
+  Data Path: system_icon/U0/U_ICON/U_iDATA_CMD (FF) to system_icon/U0/U_ICON/U_iDATA_CMD (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.514   0.451  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.612   0.357  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                     0.268          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      2.202ns (1.394ns logic, 0.808ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+Timing constraint: TS_J_TO_D = FROM TIMEGRP "J_CLK" TO TIMEGRP "D_CLK" TIG;
+  Clock period: 5.657ns (frequency: 176.757MHz)
+  Total number of paths / destination ports: 559 / 318
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Delay:                  5.657ns
+  Source:               system_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (FF)
+  Destination:          system_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s8_if.ram_rt1_s1_s8_i (RAM)
+  Data Path Delay:      5.657ns (Levels of Logic = 3)
+  Source Clock:         system_icon/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising at 0.000ns
+  Destination Clock:    system_icon/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising at 0.000ns
+
+  Data Path: system_icon/U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (FF) to system_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s8_if.ram_rt1_s1_s8_i (RAM)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            19   0.514   1.074  U0/U_ICON/U_CMD/G_TARGET[12].I_NE0.U_TARGET (U0/U_ICON/iCORE_ID<0>)
+     LUT4:I0->O           32   0.612   1.103  U0/U_ICON/U_CMD/U_CORE_ID_SEL/I4.FI[0].U_LUT (U0/U_ICON/iCORE_ID_SEL<0>)
+     LUT4:I2->O           30   0.612   1.072  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[2].U_LCE (CONTROL0<6>)
+     end scope: 'system_icon'
+     begin scope: 'system_ila'
+     RAMB16_S1_S9:ENA          0.670          U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s8_if.ram_rt1_s1_s8_i
+    ----------------------------------------
+    Total                      5.657ns (2.408ns logic, 3.249ns route)
+                                       (42.6% logic, 57.4% route)
+
+=========================================================================
+Timing constraint: TS_D_TO_J = FROM TIMEGRP "D_CLK" TO TIMEGRP "J_CLK" TIG;
+  Clock period: 8.331ns (frequency: 120.034MHz)
+  Total number of paths / destination ports: 563 / 530
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Delay:                  8.331ns
+  Source:               system_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s8_if.ram_rt1_s1_s8_i (RAM)
+  Destination:          system_icon/U0/U_ICON/U_TDO_reg (FF)
+  Data Path Delay:      8.331ns (Levels of Logic = 9)
+  Source Clock:         system_icon/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising at 0.000ns
+  Destination Clock:    system_icon/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising at 0.000ns
+
+  Data Path: system_ila/U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s8_if.ram_rt1_s1_s8_i (RAM) to system_icon/U0/U_ICON/U_TDO_reg (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S1_S9:CLKA->DOA0    1   2.436   0.426  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/G_BRAM[0].U_BRAM/ram_rt1_s1_s8_if.ram_rt1_s1_s8_i (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/localDOA<0>)
+     LUT3:I1->O            1   0.612   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_11 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_11)
+     MUXF5:I0->O           1   0.278   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_9_f5 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_9_f5)
+     MUXF6:I0->O           1   0.451   0.000  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_7_f6 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_7_f6)
+     MUXF7:I0->O           1   0.451   0.360  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_5_f7 (U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/I_MUX.U_RD_DATA/U_CS_MUX/I5.U_MUX32/Mmux_O_5_f7)
+     LUT4:I3->O            1   0.612   0.426  U0/I_YES_D.U_ILA/U_CAPSTOR/I_CASE1.I_NO_TB.I_RT1.U_RAM/muxAddrFF<4> (U0/I_YES_D.U_ILA/iDATA_DOUT)
+     LUT3:I1->O            1   0.612   0.509  U0/I_YES_D.U_ILA/U_DOUT (CONTROL<3>)
+     end scope: 'system_ila'
+     begin scope: 'system_icon'
+     LUT4:I0->O            1   0.612   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_4 (U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_4)
+     MUXF5:I0->O           1   0.278   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O_2_f5 (U0/U_ICON/iTDO_next)
+     FDE:D                     0.268          U0/U_ICON/U_TDO_reg
+    ----------------------------------------
+    Total                      8.331ns (6.610ns logic, 1.721ns route)
+                                       (79.3% logic, 20.7% route)
+
+=========================================================================
+Timing constraint: TS_D2_TO_T2 = FROM TIMEGRP "D2_CLK" TO TIMEGRP "FFS" TIG;
+  Clock period: 5.624ns (frequency: 177.798MHz)
+  Total number of paths / destination ports: 3 / 3
+  Number of failed paths / ports: 0 (0.00%) / 0 (0.00%)
+-------------------------------------------------------------------------
+Delay:                  5.624ns
+  Source:               system_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH)
+  Destination:          system_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+  Data Path Delay:      5.624ns (Levels of Logic = 6)
+  Source Clock:         system_icon/CONTROL0<13> falling at 0.000ns
+  Destination Clock:    system_icon/U0/U_ICON/I_YES_BSCAN.U_BS/DRCK1 rising at 0.000ns
+
+  Data Path: system_ila/U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (LATCH) to system_ila/U0/I_YES_D.U_ILA/U_STAT/U_TDO (FF)
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.588   0.509  U0/I_YES_D.U_ILA/U_STAT/U_DIRTY_LDC (U0/I_YES_D.U_ILA/U_STAT/DIRTY_SEL)
+     LUT3:I0->O            3   0.612   0.481  U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat1 (U0/I_YES_D.U_ILA/U_STAT/DIRTY_dstat)
+     LUT3:I2->O            1   0.612   0.000  U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91_F (N46)
+     MUXF5:I0->O           1   0.278   0.387  U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91 (U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_91)
+     LUT4:I2->O            1   0.612   0.000  U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_4 (U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_4)
+     MUXF5:I0->O           1   0.278   0.387  U0/I_YES_D.U_ILA/U_STAT/U_DMUX/U_CS_MUX/I3.U_MUX8/Mmux_O_2_f5 (U0/I_YES_D.U_ILA/U_STAT/TDO_mux_in<0>1)
+     LUT4:I2->O            1   0.612   0.000  U0/I_YES_D.U_ILA/U_STAT/U_MUX/U_CS_MUX/I1.U_MUX2/O87 (U0/I_YES_D.U_ILA/U_STAT/TDO_next)
+     FDE:D                     0.268          U0/I_YES_D.U_ILA/U_STAT/U_TDO
+    ----------------------------------------
+    Total                      5.624ns (3.860ns logic, 1.764ns route)
+                                       (68.6% logic, 31.4% route)
+
+=========================================================================
+Timing constraint: TS_J2_TO_D2 = FROM TIMEGRP "FFS" TO TIMEGRP "D2_CLK" TIG;
+-------------------------------------------------------------------------
+WARNING:Xst:1415 - No path found for this constraint.
+
+=========================================================================
+Timing constraint: TS_J3_TO_D2 = FROM TIMEGRP "FFS" TO TIMEGRP "D2_CLK" TIG;
+-------------------------------------------------------------------------
+WARNING:Xst:1415 - No path found for this constraint.
+
+=========================================================================
+Timing constraint: TS_J4_TO_D2 = FROM TIMEGRP "FFS" TO TIMEGRP "D2_CLK" TIG;
+-------------------------------------------------------------------------
+WARNING:Xst:1415 - No path found for this constraint.
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.47 secs
+ 
+--> 
+
+
+Total memory usage is 811968 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   40 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

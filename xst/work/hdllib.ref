@@ -1,0 +1,7 @@
+EN vgacontroller NULL "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" sub00/vhpl05 1763317302
+AR ila ila_a "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/ila.vhd" sub00/vhpl03 1763317434
+AR icon icon_a "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/icon.vhd" sub00/vhpl01 1763317432
+EN icon NULL "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/icon.vhd" sub00/vhpl00 1763317431
+EN gameofpingpong NULL "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" sub00/vhpl04 1763317435
+AR gameofpingpong behavioral "/home/student1/ahafian/COE 758/COE758Project2/GAMEofPINGPONG.vhd" sub00/vhpl06 1763317436
+EN ila NULL "/home/student1/ahafian/COE 758/COE758Project2/ipcore_dir/ila.vhd" sub00/vhpl02 1763317433

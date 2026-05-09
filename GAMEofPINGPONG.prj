@@ -1,0 +1,3 @@
+vhdl work "ipcore_dir/icon.vhd"
+vhdl work "ipcore_dir/ila.vhd"
+vhdl work "GAMEofPINGPONG.vhd"
